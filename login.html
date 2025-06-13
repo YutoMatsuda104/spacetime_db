@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ログイン</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style_2.css">
+</head>
+<body>
+
+
+
+    <nav class="navbar navbar-default navbar-custom" role="navigation">
+        <div class="header">
+            <h1>時空間データベース</h1>
+        </div>
+        <div class="nav">
+            <a href="https://muds.gdl.jp/~s2322104/">ホーム</a>
+            <div class="dropdown">
+                <a href="javascript:void(0)">授業課題</a>
+                <div class="dropdown-content">
+                    <a href="https://muds.gdl.jp/~s2322104/Lec01/Lec01_hw.html">第1回</a>
+                    <div class="sub-dropdown">
+                        <a href="javascript:void(0)">第2回</a>
+                        <div class="sub-dropdown-content">
+                            <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q1.php">2-1</a>
+                            <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q2.php">2-2</a>
+                            <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q3.php">2-3</a>
+                            <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q4.php">2-4</a>
+                            <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q5.php">2-5</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">最終課題</a>
+            <a href="#">アカウント</a>
+            <a href="https://muds.gdl.jp/~s2322104/introduction.html">作成者紹介</a> <!-- 作成者紹介ページのリンクを追加 -->
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <h1>ログイン</h1>
+        <div class="content-section">
+            <form method="POST" action="./index.php">
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="text" class="form-control" id="email" name="emf" size="40">
+                </div>
+                <div class="form-group">
+                    <label for="pw">パスワード</label>
+                    <input type="password" class="form-control" id="pw" name="pwf" size="40">
+                </div>
+                <button type="submit" class="btn btn-primary">ログイン</button>
+            </form>
+            <p>はじめての方は<a href="https://muds.gdl.jp/~s2322104/Lec_final/regform.html">こちら</a>から登録してください。</p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

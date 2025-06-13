@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプルフォーム</title>
+<link rel="stylesheet" href="../css/style_2.css">
+
+
+<style>
+  body {
+      font-family: 'Noto Sans JP', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e0b0ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  .login-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      width: 400px;
+  }
+
+  .login-container h1 {
+      color: #333;
+      margin-bottom: 20px;
+  }
+
+  .form-group {
+      margin-bottom: 20px;
+  }
+
+  .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #555;
+      font-weight: 500;
+  }
+
+  .form-group input {
+      width: calc(100% - 20px);
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
+      margin: 0 auto;
+      display: block;
+  }
+
+  .form-group input:focus {
+      border-color: #667eea;
+      outline: none;
+  }
+
+  .btn-primary {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      transition: transform 0.3s, box-shadow 0.3s;
+      margin-top: 10px;
+  }
+
+  .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .register-link {
+      margin-top: 20px;
+      font-size: 14px;
+  }
+
+  .register-link a {
+      color: #667eea;
+      text-decoration: none;
+  }
+
+  .register-link a:hover {
+      text-decoration: underline;
+  }
+</style>
+
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+    
+    function showPosition(position) {
+        document.getElementById('latitude').value = position.coords.latitude;
+        document.getElementById('longitude').value = position.coords.longitude;
+    }
+    
+    window.onload = getLocation;
+</script>
+
+
+
+</head>
+<body>
+    <header>
+    <div class="header">
+    <h1>時空間データベース</h1>
+</div>
+
+<div class="nav">
+    <a href="https://muds.gdl.jp/~s2322104/">ホーム</a>
+    <div class="dropdown">
+        <a href="javascript:void(0)">授業課題</a>
+        <div class="dropdown-content">
+            <a href="https://muds.gdl.jp/~s2322104/Lec01/Lec01_hw.html">第1回</a>
+            <div class="sub-dropdown">
+                <a href="javascript:void(0)">第2回</a>
+                <div class="sub-dropdown-content">
+                    <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q1.php">2-1</a>
+                    <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q2.php">2-2</a>
+                    <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q3.php">2-3</a>
+                    <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q4.php">2-4</a>
+                    <a href="https://muds.gdl.jp/~s2322104/Lec02/Lec02_q5.php">2-5</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="https://muds.gdl.jp/~s2322104/Lec_final/index.php">最終課題</a>
+    <!-- <a href="https://muds.gdl.jp/~s2322104/Lec_final/login.html">アカウント</a> -->
+    <a href="https://muds.gdl.jp/~s2322104/introduction.html">作成者紹介</a>
+</div>
+
+
+
+
+<h1>新規登録</h1>
+
+<form action="a.php" method="post">
+    <label for="name">トイレの名前：</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="category">トイレのカテゴリ：</label>
+    <select id="category" name="category">
+        <option value="公衆トイレ">公衆トイレ</option>
+        <option value="駅">駅</option>
+        <option value="商業施設">商業施設</option>
+        <option value="その他">その他</option>
+    </select><br><br>
+
+    <label for="prefecture">都道府県：</label>
+    <select name="prefecture" id="prefecture">
+        <option value="北海道">北海道</option>
+        <option value="青森県">青森県</option>
+        <option value="岩手県">岩手県</option>
+        <option value="宮城県">宮城県</option>
+        <option value="秋田県">秋田県</option>
+        <option value="山形県">山形県</option>
+        <option value="福島県">福島県</option>
+        <option value="群馬県">群馬県</option>
+        <option value="栃木県">栃木県</option>
+        <option value="茨城県">茨城県</option>
+        <option value="埼玉県">埼玉県</option>
+        <option value="千葉県">千葉県</option>
+        <option value="東京都">東京都</option>
+        <option value="神奈川県">神奈川県</option>
+        <option value="新潟県">新潟県</option>
+        <option value="富山県">富山県</option>
+        <option value="石川県">石川県</option>
+        <option value="福井県">福井県</option>
+        <option value="山梨県">山梨県</option>
+        <option value="長野県">長野県</option>
+        <option value="岐阜県">岐阜県</option>
+        <option value="静岡県">静岡県</option>
+        <option value="愛知県">愛知県</option>
+        <option value="三重県">三重県</option>
+        <option value="滋賀県">滋賀県</option>
+        <option value="京都府">京都府</option>
+        <option value="大阪府">大阪府</option>
+        <option value="兵庫県">兵庫県</option>
+        <option value="奈良県">奈良県</option>
+        <option value="和歌山県">和歌山県</option>
+        <option value="鳥取県">鳥取県</option>
+        <option value="島根県">島根県</option>
+        <option value="岡山県">岡山県</option>
+        <option value="広島県">広島県</option>
+        <option value="山口県">山口県</option>
+        <option value="徳島県">徳島県</option>
+        <option value="香川県">香川県</option>
+        <option value="愛媛県">愛媛県</option>
+        <option value="高知県">高知県</option>
+        <option value="福岡県">福岡県</option>
+        <option value="佐賀県">佐賀県</option>
+        <option value="長崎県">長崎県</option>
+        <option value="熊本県">熊本県</option>
+        <option value="大分県">大分県</option>
+        <option value="宮崎県">宮崎県</option>
+        <option value="鹿児島県">鹿児島県</option>
+        <option value="沖縄県">沖縄県</option>
+    </select>  
+    <input type="text" id="pl" name="pl" placeholder="例:千代田区千代田1-1"><br><br>
+    <input type="hidden" id="latitude" name="latitude">
+    <input type="hidden" id="longitude" name="longitude">
+
+    <input type="submit" value="送信">
+</form>
+
+</body>
+</html>
